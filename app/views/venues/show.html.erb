@@ -38,16 +38,19 @@
                 
                 <!-- Label and input for dish_id -->
                 <div class="form-group">
-                  <label for="dish_id" class="control-label">
-                  </label>
-                    <%= select_tag(:dish_id, options_from_collection_for_select(Dish.all, :id, :name), :class => "form-control") %>
-                </div>
+                
           
                 <!-- Label and input for venue_id -->
                 <input type="hidden" name="venue_id" value="<%= @venue.id %>">
           
                 <!-- Label and input for user_id -->
                 <input type="hidden" name="user_id" value="<%= current_user.id %>">
+                <div class = "form-group mr-sm-1">
+                    <label for="dish_id" class="control-label">
+                  </label>
+                    <%= select_tag(:dish_id, options_from_collection_for_select(Dish.all, :id, :name), :class => "form-control") %>
+                </div>
+                </div>
           
                 <button class="btn btn-primary btn-sm">
                   <i class="fa fa-heart"></i>
